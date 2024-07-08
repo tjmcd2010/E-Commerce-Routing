@@ -1,0 +1,31 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS ecommerce_db;
+
+-- CREATE DATABASE
+CREATE DATABASE ecommerce_db;
+
+\c ecommerce_db
+
+CREATE TABLE Category (
+  id SERIAL PRIMARY KEY NOT NULL,
+  category_name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Product (
+  id SERIAL PRIMARY KEY NOT NULL,
+  product_name VARCHAR(30) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  stock INT NOT NULL DEFAULT 10 CHECK (stock >= 0),
+  category_id INT REFERENCES Category(id) NOT NULL
+);
+ 
+ CREATE TABLE Tag (
+  id SERIAL PRIMARY KEY NOT NULL,
+  tag_name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE ProductTag (
+  id SERIAL PRIMARY KEY NOT NULL,
+  product_id INT REFERENCES Product(id) NOT NULL,
+  tag_id INT REFERENCES Tag(id) NOT NULL
+);
