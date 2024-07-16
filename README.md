@@ -14,8 +14,13 @@
 
   [Video Demonstration](https://drive.google.com/file/d/1-mvtt4lZsW4ONldGuN258PAQiDG3GJtu/view?usp=sharing)
 
-  ## Screenshot of Deployed Application
-  
+  ## Screenshots of Deployed Application
+
+  ![PostgreSQL Database View](./Images/database-view.png)
+  ![View of Routes in Insomnia](./Images/Insomnia-view.png)
+  ![Post Route Example in Insomnia](./Images/post-new-product.png)
+  ![Product Seeds File in VS Code](./Images/product-seeds.png)
+  ![Schema.sql File in VS Code](./Images/schema.png)  
 
   ## Table of Contents
   - [Installation](#installation)
@@ -38,8 +43,9 @@
   ## Tests
   N/A
 
-  ## Technologies
+  ## Technologies Used
   
+  Node.js, Express.js, postgreSQL, Sequelize, 
 
    ## License
   MIT
